@@ -12,7 +12,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 "Navigate and manipulate files in a tree view.
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 "Dim Paragraph above and below the active paragraph. To Use :LimeLight  To Stop :LimeLight! 
 Plug 'junegunn/limelight.vim'
@@ -71,9 +71,10 @@ autocmd FileType html nnoremap ;b <b></b><Esc>FbT>i
 "Simply Fold
 let g:SimpylFold_docstring_preview=1
 
-"NerdTree bind key Leader + n
+"NerdTree bind key Leader + n using nerdtree-plug
 map <Leader>n :NERDTreeToggle<CR>
 
-" Color name (:help cterm-colors) or ANSI code
+" Color name (:help cterm-colors) or ANSI code using limelight-plug
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+
