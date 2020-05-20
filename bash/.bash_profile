@@ -1,5 +1,5 @@
-source ~/dotfiles/.functions 
-source ~/dotfiles/.aliases
+source ~/dotfiles/functions/.functions 
+source ~/dotfiles/aliases/.aliases
 # Hide Initial Message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
