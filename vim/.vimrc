@@ -20,10 +20,6 @@ Plug 'junegunn/limelight.vim'
 "Distraction free writing by removing UI elements and centering everything.
 Plug 'junegunn/goyo.vim'
 
-"Fuzzy Finger. To use Leader+p
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 " Initialize plugin system
 call plug#end()
 
@@ -82,9 +78,3 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
-"Fuzzy Finger key mapping 
-map <Leader>p :Files<CR>
-" Empty value to disable preview window altogether
-let g:fzf_preview_window = ''
-" Always enable preview window on the right with 60% width
-let g:fzf_preview_window = 'right:60%'
