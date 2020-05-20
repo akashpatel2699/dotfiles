@@ -1,3 +1,5 @@
+source ~/dotfiles/.functions 
+source ~/dotfiles/.aliases
 # Hide Initial Message
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
@@ -25,55 +27,6 @@ git config --global format.pretty oneline
 git config --global core.autocrl input
 git config --global core.fileMode true
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-#aliases. MAKE TERMINAL BETTER
-
-alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'
-alias f='open -a Finder ./'
-alias myip='ipconfig getifaddr en0'
-alias c='clear'
-alias weather='curl http://wttr.in/'
-alias xcode='open -a xcode'
-alias python='python3'
-alias pcore='sysctl hw.physicalcpu'
-alias lcore='sysctl hw.logicalcpu'
-alias kernel='uname -sr'
-#   -------------------------------
-#   3. FILE AND FOLDER MANAGEMENT
-#   -------------------------------
-
-zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
-alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
-
-#extract: Extract most known acrhives with one command
-
-	extract() {
-		if [ -f $1 ] ; then
-			case $1 in 
-				*.tar.bz2)   tar xjf $1     ;;
-				*.tar.gz)    tar xzf $1     ;;
-				*.bz2)       bunzip2 $1     ;;
-				*.rar)       unrar e $1     ;;
-				*.gz)        gunzip $1      ;;
-				*.tar)       tar xf $1      ;;
-				*.tbz2)      tar xjf $1     ;;
-				 *.tgz)       tar xzf $1     ;;
-				 *.zip)       unzip $1       ;;
-				 *.Z)         uncompress $1  ;;
-				 *.7z)        7z x $1        ;;
-				 *)     echo "'$1' cannot be extracted via extract()" ;;
-					esac
-		else 
-			echo "'$1' is not a valid file"
-		fi
-	}
-
 
 # Colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
