@@ -22,11 +22,11 @@ POWERLINE_BASH_SELECT=1
 . /Users/akashpatel/Library/Python/3.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
 
 #Git
-git config --global color.ui true
-git config --global format.pretty oneline
-git config --global core.autocrl input
-git config --global core.fileMode true
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#git config --global color.ui true
+#git config --global format.pretty oneline
+#git config --global core.autocrl input
+#git config --global core.fileMode true
+#git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Colored man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
