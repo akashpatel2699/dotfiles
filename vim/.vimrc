@@ -35,6 +35,9 @@ Plug 'terryma/vim-multiple-cursors'
 "EMMET is a powerful completion for HTML, CSS, JavaScritp
 Plug 'mattn/emmet-vim'
 
+"nerdcommentor for multi line comments
+Plug 'preservim/nerdcommenter'
+
 " Initialize plugin system
 call plug#end()
 
