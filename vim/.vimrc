@@ -32,6 +32,9 @@ Plug 'tpope/vim-surround'
 "Multiple Cursor 
 Plug 'terryma/vim-multiple-cursors'
 
+"EMMET is a powerful completion for HTML, CSS, JavaScritp
+Plug 'mattn/emmet-vim'
+
 " Initialize plugin system
 call plug#end()
 
