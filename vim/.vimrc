@@ -20,6 +20,18 @@ Plug 'junegunn/limelight.vim'
 "Distraction free writing by removing UI elements and centering everything.
 Plug 'junegunn/goyo.vim'
 
+"A git wrapper
+Plug 'tpope/vim-fugitive'
+
+" Zoom in and out of a specific split pane (similar to tmux).
+Plug 'dhruvasagar/vim-zoom'
+
+"quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
+
+"Multiple Cursor 
+Plug 'terryma/vim-multiple-cursors'
+
 " Initialize plugin system
 call plug#end()
 
