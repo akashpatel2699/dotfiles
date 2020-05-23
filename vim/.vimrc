@@ -42,6 +42,9 @@ Plug 'preservim/nerdcommenter'
 "FZF Fuzzy Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+" Check Syntax in Vim asynchronously and fix files
+Plug 'w0rp/ale'
+
 " Initialize plugin system
 call plug#end()
 
