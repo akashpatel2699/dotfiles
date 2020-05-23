@@ -48,6 +48,12 @@ Plug 'w0rp/ale'
 " css/less/scss/html color preview for vim
 Plug 'gorodinskiy/vim-coloresque'
 
+" Show git diff markers in the sign column and stages/previews/undoes hunks..
+Plug 'airblade/vim-gitgutter'
+
+"Viewer & Finder for LSP symbols and tags 
+Plug 'liuchengxu/vista.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -116,6 +122,11 @@ set rtp+=/usr/local/opt/fzf
 " FZF.vim hot keys
 map <Leader>p :Files<CR>
 nmap <Leader>; :Buffers<CR>
+
+" Vim gitgutter
+set updatetime=100
+map <Leader>gi :GitGutterToggle<CR>
+let g:gitgutter_enabled = 0
 
 "" Search results centered please
 "nnoremap <silent> n nzz
