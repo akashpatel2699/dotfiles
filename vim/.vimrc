@@ -103,3 +103,6 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
 
+" ALE PLUGIN 
+map <Leader>e :ALEToggle<CR>
+let g:ale_enabled = 0
