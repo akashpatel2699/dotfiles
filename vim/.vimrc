@@ -34,16 +34,19 @@ Plug 'terryma/vim-multiple-cursors'
 
 "EMMET is a powerful completion for HTML, CSS, JavaScritp
 Plug 'mattn/emmet-vim'
-Plug 'junegunn/fzf.vim'
 
 "nerdcommentor for multi line comments
 Plug 'preservim/nerdcommenter'
 
 "FZF Fuzzy Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Check Syntax in Vim asynchronously and fix files
 Plug 'w0rp/ale'
+
+" css/less/scss/html color preview for vim
+Plug 'gorodinskiy/vim-coloresque'
 
 " Initialize plugin system
 call plug#end()
@@ -106,3 +109,17 @@ let g:limelight_conceal_ctermfg = 240
 " ALE PLUGIN 
 map <Leader>e :ALEToggle<CR>
 let g:ale_enabled = 0
+
+" FZF
+set rtp+=/usr/local/opt/fzf
+
+" FZF.vim hot keys
+map <Leader>p :Files<CR>
+nmap <Leader>; :Buffers<CR>
+
+"" Search results centered please
+"nnoremap <silent> n nzz
+"nnoremap <silent> N Nzz
+"nnoremap <silent> * *zz
+"nnoremap <silent> # #zz
+"nnoremap <silent> g* g*zz
