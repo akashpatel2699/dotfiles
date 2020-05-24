@@ -5,9 +5,9 @@ let mapleader = ','
 
 "############## VIM-PLUG pluggin manager for vim ###############
 if empty(glob('~/.vim/autoload/plug.vim'))
-	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 
@@ -54,12 +54,17 @@ Plug 'airblade/vim-gitgutter'
 "Viewer & Finder for LSP symbols and tags 
 Plug 'liuchengxu/vista.vim'
 
+" Auto Pairs
+Plug 'jiangmiao/auto-pairs'
+
+" Vim motions on speed
+Plug 'easymotion/vim-easymotion'
+
 " Initialize plugin system
 call plug#end()
 
 set expandtab
 set number
-set paste
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -128,7 +133,17 @@ set updatetime=100
 map <Leader>gi :GitGutterToggle<CR>
 let g:gitgutter_enabled = 0
 
-"" Search results centered please
+" Vim motion Mapping
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+
+" Search results centered please
 "nnoremap <silent> n nzz
 "nnoremap <silent> N Nzz
 "nnoremap <silent> * *zz
