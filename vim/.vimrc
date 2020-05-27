@@ -60,6 +60,9 @@ Plug 'jiangmiao/auto-pairs'
 " Vim motions on speed
 Plug 'easymotion/vim-easymotion'
 
+" Code Formater 
+Plug 'prettier/vim-prettier', { 'do': 'yarn install'  }
+
 " Initialize plugin system
 call plug#end()
 
@@ -142,6 +145,10 @@ map <Leader>l <Plug>(easymotion-bd-jk)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
+
+" Vim Prettier 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " Search results centered please
 "nnoremap <silent> n nzz
