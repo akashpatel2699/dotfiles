@@ -28,13 +28,11 @@ POWERLINE_BASH_SELECT=1
 #git config --global core.fileMode true
 #git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# Colored man pages
-export LESS_TERMCAP_mb=$'\E[01;31m'
+# Colored man pages 31-red 32-green 33-yellow 0-reset/normal 1-bold 4-underlined
+export LESS_TERMCAP_mb=$'\E[1;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
 export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_so=$'\E[01;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
-
-
+export LESS_TERMCAP_us=$'\E[01;4;32m'
