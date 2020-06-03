@@ -23,9 +23,6 @@ Plug 'junegunn/goyo.vim'
 "A git wrapper
 Plug 'tpope/vim-fugitive'
 
-" Zoom in and out of a specific split pane (similar to tmux).
-Plug 'dhruvasagar/vim-zoom'
-
 "quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
@@ -157,15 +154,10 @@ let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " One Dark Plugin
-"syntax on
-"colorscheme onedark
+syntax on
+let g:onedark_terminal_italics=1
+let g:onedark_termcolors=16
+colorscheme onedark
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
-
-"Search results centered please
-"nnoremap <silent> n nzz
-"nnoremap <silent> N Nzz
-"nnoremap <silent> * *zz
-"nnoremap <silent> # #zz
-"nnoremap <silent> g* g*zz
