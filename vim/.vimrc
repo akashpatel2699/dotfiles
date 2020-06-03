@@ -63,6 +63,12 @@ Plug 'easymotion/vim-easymotion'
 " Code Formater 
 Plug 'prettier/vim-prettier', { 'do': 'yarn install'  }
 
+"A light and configurable statusline/tabline plugin for vim
+Plug 'itchyny/lightline.vim'
+
+"A dark vim color scheme inspired by Atom's One Dark syntax theme
+Plug 'joshdick/onedark.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -150,7 +156,14 @@ map  <Leader>w <Plug>(easymotion-bd-w)
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-" Search results centered please
+" One Dark Plugin
+"syntax on
+"colorscheme onedark
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
+
+"Search results centered please
 "nnoremap <silent> n nzz
 "nnoremap <silent> N Nzz
 "nnoremap <silent> * *zz

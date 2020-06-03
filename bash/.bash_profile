@@ -16,10 +16,12 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 #Powerline stuff
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /Users/akashpatel/Library/Python/3.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+if [ -f `which powerline-daemon` ]; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . /Users/akashpatel/Library/Python/3.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+fi
 
 #Git
 #git config --global color.ui true
