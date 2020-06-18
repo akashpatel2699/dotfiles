@@ -17,3 +17,4 @@ alias pcore='sysctl hw.physicalcpu'
 alias lcore='sysctl hw.logicalcpu'
 alias kernel='uname -sr'
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
+alias docker='open --background -a Docker'
