@@ -13,6 +13,7 @@ alias c='clear'
 alias weather='curl http://wttr.in/'
 alias xcode='open -a xcode'
 alias python='python3'
+alias pip="pip3"
 alias pcore='sysctl hw.physicalcpu'
 alias lcore='sysctl hw.logicalcpu'
 alias kernel='uname -sr'
